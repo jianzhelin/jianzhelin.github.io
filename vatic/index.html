@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>vatic - Video Annotation Tool - UC Irvine</title>
+<style>
+#container
+{
+	width : 900px;
+	padding : 25px;
+	margin : 25px auto;
+	background-color : #fff;
+	font-family : Arial;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 15px; 
+}
+h1 strong
+{
+	font-size : 50px;
+}
+h1
+{
+	margin : 0;
+	padding : 0;
+	font-size : 30px;
+}
+body
+{
+	background-color : #EFEFEF;
+}
+code
+{
+	border : 1px solid #ccc;
+	display : block;
+	padding : 5px;
+	margin : 10px;
+}
+blockquote
+{
+}
+.download{
+display:block;background-color:#D1FFCE;color:#055600;font-weight:bold;font-size:20px;padding:10px;width:200px;text-align:center;text-decoration:none;
+margin-top : 40px;margin-left:60px;cursor:pointer;
+}
+.download:hover
+{
+background-color : #009A42;color:#fff;
+}
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17813713-3', 'mit.edu');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+
+<div id="container">
+
+<h1 style="text-align:center;"><strong>V</strong>ideo <strong>A</strong>nnotation <strong>T</strong>ool
+from <strong>I</strong>rvine, <strong>C</strong>alifornia</h1>
+
+<blockquote style="text-align:center;">"These are some of the best HITS I've ever done!" <cite>&mdash; Mechanical Turk worker</cite></blockquote>
+
+<div style="margin-top : 30px;">
+
+<div style="float : right; text-align : center; margin-left : 20px;border:2px solid black;">
+<object width="531" height="305"><param name="movie" value="http://www.youtube.com/v/ljI5pAowACc?hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/ljI5pAowACc?hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="531" height="305"></embed></object>
+</div>
+<p style="padding-top : 30px; line-height : 1.7em;">vatic is a <strong>free,  online, interactive video annotation tool</strong> for computer vision research that crowdsources work to
+Amazon's Mechanical Turk. Our tool makes it easy to build massive, affordable video data sets and can be deployed on a cloud. 
+After three years of research, vatic is now used by labs around the world to annotate the next generation of data sets.</p>
+
+</div>
+
+<br clear="both">
+
+<div style="float:right;width:400px;">
+
+<h2>Features</h2>
+<ul>
+<li>Crowdsource video annotation to Mechanical Turk</li>
+<li>Automatic quality assurance for good annotations</li>
+<li>Complex payment schedules and bonuses</li>
+<li>One-click worker compensation</li>
+<li>Optimized interface for video annotation</li>
+<li>Offline mode for expert annotator use (no MTurk)</li>
+<!--<li><a href="http://sandbox-deepthought.ics.uci.edu/?id=301&hitId=offline">Interactive Demo</a></li>-->
+</ul>
+
+</div>
+
+<h2>News</h2>
+<ul>
+    <li><em>16 Oct 2013</em> &mdash; Popular <a href="#extensions">extensions</a> to VATIC added.</li>
+    <li><em>28 Feb 2012</em> &mdash; Fixed exploit: all users should upgrade.</li> 
+    <li><em>26 Feb 2012</em> &mdash; New ways to output annotations</li>
+    <li><em>12 Oct 2011</em> &mdash; A few improvements to the quality control system.</li>
+	<li><em>17 Aug 2011</em> &mdash; A couple of improvements to the user interface.</li>
+	<li><em>14 Jul 2011</em> &mdash; Annotations for the ball are downloadable.</li>
+	<!--<li><em>8 Jul 2011</em> &mdash; An <a href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-a7b7e5e2">EC2 image</a> with vatic preinstalled is available.</li>-->
+	<li><em>05 Jul 2011</em> &mdash; Support for <a href="http://www.youtube.com/watch?v=rlh3-c-Btnk">attributes</a> on objects is available.</li>
+	<li><em>29 Jun 2011</em> &mdash; Version 2.0 of our system is released.</li>
+	<li><em>20 Apr 2011</em> &mdash; Basketball annotations are now downloadable.</li>
+	<li><em>28 Jul 2010</em> &mdash; A beta release of the code is now available.</li>
+	<li><em>07 Jul 2010</em> &mdash; Basketball video available for download.</li>
+</ul>
+
+<h2>Code &amp; Download</h2>
+
+<!--<p>There are two ways to deploy our tool: launch a Amazon EC2 node with vatic
+already installed, or download our code and install it yourself. The advantage
+of using our EC2 image is that you can start annotating videos in a few
+minutes. If you are not familar with EC2 and do not wish to learn, or want to
+use your own dedicated hardware, you can also install vatic from source.</p>
+
+<h3>Cloud Installation (EC2)</h3>
+
+<p>Amazon's Elastic Compute Cloud (EC2) is a large cluster of computers where
+you can pay for resources for a typically low hourly rate. To use vatic on EC2,
+simply launch an instance with vatic already installed:</p>
+
+<p style="margin-left:20px;"><a href="https://console.aws.amazon.com/ec2/home?region=us-west-1#launchAmi=ami-a7b7e5e2" style="margin-right:20px;" target="_blank">Launch a vatic instance now</a> ami-a7b7e5e2 on us-west-1</p>
+
+<p>After launching, you can connect to the server with:</p>
+
+<code>ssh -i {yourkey.perm} ubuntu@{public-dns}.compute.amazonaws.com</code>
+
+<p>replacing the tokens enclosed in curly brackets with the correct parameters. Once you consult the README file in the home directory, you will be ready to annotate.</p>
+
+<h3>Manual Installation</h3>-->
+
+<p>The latest copy of our code is available for download:</p>
+
+<pre><code>wget http://mit.edu/vondrick/vatic/vatic-install.sh
+chmod +x vatic-install.sh
+./vatic-install.sh
+cd vatic
+less README</code></pre>
+
+<p>Please read the <a href="https://raw.github.com/cvondrick/vatic/master/README">README</a> file for proper installation. If you 
+run into any trouble, don't hesitate to contact us.</p>
+
+<h2>Data</h2>
+<ul>
+	<li>UCI Basketball: <a href="http://deepthought.ics.uci.edu/~cvondrick/basketball.tar.gz">frames (13 GB)</a>, <a href="basketball-annotations.tar.bz2">annotations (17 MB)</a></li>
+    <li>VIRAT Challenge Video Dataset: <a href="http://www.viratdata.org/">download</a></li>
+</ul>
+
+
+<h2>Samples</h2>
+
+<div style="float : left;">
+<iframe width="385" height="289" src="http://www.youtube.com/embed/ghQPeYD4xxY?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<div style="float : left;">
+<iframe width="514" height="289" src="http://www.youtube.com/embed/pYLPi3OQ4aY?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<!--<div style="float:left">
+<iframe width="514" height="289" src="http://www.youtube.com/embed/H8cMZkz8Kbw?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+<div style="float:left">
+<iframe width="385" height="289" src="http://www.youtube.com/embed/MLIFZVuMTl8?rel=0" frameborder="0" allowfullscreen></iframe></div>-->
+
+<br clear="both">
+
+<h2 id="extensions">Extensions</h2>
+<p>Other researchers have developed extensions that add additional features to VATIC:</p>
+<ul>
+    <li><a href="https://github.com/marcovzla/vatic/tree/bolt">Sentence annotations</a> by Marco Antonio Valenzuela Escarcega</li>
+    <li><a href="http://vision.cs.utexas.edu/projects/active-untrimmed/">Labeling time intervals</a> by Sunil Bandla and Kristen Grauman</li>
+    <li><a href="https://github.com/dreamdragon/vatic">Human action labeling</a> by Weiyu Zhang, Menglong Zhu, and Kosta Derpanis</li>
+</ul>
+<p>If you use their software in a paper, please cite them appropriately.</p>
+
+<h2>Publications</h2>
+
+<p>If you use our software or our data sets, please cite:</p>
+
+<p>Carl Vondrick, Donald Patterson, Deva Ramanan. "Efficiently Scaling Up Crowdsourced Video Annotation" <em>International Journal of Computer Vision</em> (IJCV). June 2012. <a href="ijcv.pdf">[pdf]</a></p>
+
+<pre><code>@article {springerlink:10.1007/s11263-012-0564-1,
+   author = {Vondrick, Carl and Patterson, Donald and Ramanan, Deva},
+   affiliation = {Department of Computer Science, UC Irvine, Irvine, USA},
+   title = {Efficiently Scaling up Crowdsourced Video Annotation},
+   journal = {International Journal of Computer Vision},
+   publisher = {Springer Netherlands},
+   issn = {0920-5691},
+   keyword = {Computer Science},
+   pages = {1-21},
+   url = {http://dx.doi.org/10.1007/s11263-012-0564-1},
+   note = {10.1007/s11263-012-0564-1},
+}</code></pre>
+
+<h2>People</h2>
+<ul>
+	<li><a href="http://mit.edu/vondrick">Carl Vondrick</a> (primary contact)</li>
+	<li><a href="http://www.ics.uci.edu/~dramanan">Deva Ramanan</a></li>
+	<li><a href="http:///www.ics.uci.edu/~djp3">Donald Patterson</a></li>
+</ul>
+
+<h2>Acknowledgements &amp; Funding</h2>
+
+<p>We thank Sangmin Oh, Allie Janoch, Sergey Karayev, Kate Saenko, Jenny Yuen,
+Antonio Torralba, Justin Chen, Will Zou, Baris Evrim Demiroz, Marco
+Antonio Valenzuela Escarcega, Alper Aydemir, David Owens, Hamed Pirsiavash,
+our user study participants, and the thousands of annotators for testing our
+software and offering invaluable insight throughout this study.</p>
+
+<p>Funding for
+this research was provided by NSF grants 0954083 and 0812428, ONR-MURI Grant
+N00014-10-1-0933, DARPA Contract No. HR0011-08-C-0135, an NSF Graduate Research
+Fellowship, support from Intel, and an Amazon AWS grant. </p>
+
+
+
+<h2>License</h2>
+<p>Copyright &copy; 2011 Carl Vondrick, Deva Ramanan, and Donald Patterson</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<ol>
+<li>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</li>
+</ol>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+<div style="text-align:center;"><img src="bg.jpg"></div>
+
+<div style="text-align:center; padding-top:20px;"><img src="uci.jpg"></div>
+
+
+</div>
+
+</body>
+</html>
